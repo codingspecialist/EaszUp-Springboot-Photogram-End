@@ -20,7 +20,7 @@ function subscribeInfoModalOpen() {
 			$("#subscribeModalList").empty();
 
 			res.data.forEach((u) => {
-				let item = getSubscribe(u);
+				let item = getSubscribeModalItem(u);
 				$("#subscribeModalList").append(item);
 			});
 		})
@@ -31,7 +31,7 @@ function subscribeInfoModalOpen() {
 }
 
 // 구독자 정보 모달에서 아이템 생성
-function getSubscribe(u) {
+function getSubscribeModalItem(u) {
 	let item = `<div class="subscribe__item" id="subscribeModalItem-${u.userId}">`;
 	item += `<div class="subscribe__img">`;
 	item += `<img src="/upload/${u.profileImageUrl}" alt=""  onerror="this.src='/images/person.jpeg'"/>`;
