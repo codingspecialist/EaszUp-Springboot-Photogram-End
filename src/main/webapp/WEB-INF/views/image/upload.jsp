@@ -19,10 +19,10 @@
                 
                 <!--사진업로드 Form-->
                 <form class="upload-form" method="POST" enctype="multipart/form-data" action="/image">
-                    <input type="file" name="file"  onchange="imageUpload(event)"/>
+                    <input type="file" name="file"  onchange="imageChoose(this)"/>
                     
                     <div class="upload-img">
-                        <img src="/images/profile.jpeg" alt="" id="imageUploadPreview" />
+                        <img src="/images/person.jpeg" alt="" id="imageUploadPreview" />
                     </div>
                     
                     <!--사진설명 + 업로드버튼-->
