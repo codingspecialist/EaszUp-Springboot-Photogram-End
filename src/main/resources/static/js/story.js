@@ -61,11 +61,11 @@ function getStoryItem(image) {
 		<div class="sl__item__contents__icon"> `;
 
   if (image.likeState) {
-    result += `<button onclick="toggleLike(${image.id})">
+    result += `<button onclick="toggleLike(${image.id}, this)">
 							<i class="fas fa-heart active" id="storyLikeIcon-${image.id}"></i>
 						</button>`;
   } else {
-    result += `<button onclick="toggleLike(${image.id})">
+    result += `<button onclick="toggleLike(${image.id}, this)">
 							<i class="far fa-heart" id="storyLikeIcon-${image.id}"></i>
 						</button>`;
   }
@@ -102,7 +102,7 @@ function getStoryItem(image) {
 		`;
 
   image.comments.forEach((comment) => {
-    result += `	<div class="sl__item__contents__comment" id="storyComment-${comment.id}"">
+    result += `	<div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"">
 			    <p>
 			      <b>${comment.user.username} :</b>
 			      ${comment.content}
